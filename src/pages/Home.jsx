@@ -1,0 +1,79 @@
+// ----------------HOME---------------
+// Nav:
+// -- (izquierda) logo
+// -- (centro) nombre de version de api
+// -- (derecha) menú desplegable (sellecione la versión) con btn a cada page de versión (te lleva a las paginas de login o update user de cada version)
+
+// Hero 
+// --Titulo Apie Evolution Suite 
+// -- Subtítulo: Una breve y atractiva descripción, como "Un viaje interactivo por la evolución de las arquitecturas backend".
+// --b (Si una API está seleccionada, el hero cambia a:
+// --b Título: "API Evolution Suite · [Nombre de la versión]"
+// --b Subtítulo: "[Arquitectura usada] + [Tecnologías clave]"
+// --bBotones:
+// -----"Volver al inicio"
+// -----"Ir al CRUD"
+
+
+// Sección "Cómo Funciona"
+// -- explicación de como funciona el proyecto (sirve para seleccionar distintas arquitecturas y usarlas en un crud, etc)
+// -- explicar tecnologias del front
+
+// sección versiones Api
+// -- imagen a derecha o izquierda 
+// -- breve resumen de cada api con detalle de arquitectura, middlewares, y demas herramientas. 
+// -- boton para elegir esa api y hacer crud de usuario (te lleva a información detallada o al update user??)
+
+// Dashboard Comparativo
+// --cuadro o tabla conparando las distintas versiones
+
+// footer
+// --Repositorio GitHub
+// --Documentación técnica
+// --Tu perfil (LinkedIn)
+// -- Proyecto educativo · © 2024
+// -- Mi nombre y apellido
+
+// Componentes a realizar
+// 1-nav (El dropdown debe reflejar la versión seleccionada)
+// 2-Hero (Si selectedVersion es null, muestra el hero principal.)
+// 3-seccion como funciona
+// 4-versiones de api (no va a ser una card sino mas bien una sección con imagen a la derecho o izquierda (una y una intercalado) mas la breve descripción de la versión + botón para entrar a la página de la versión)
+// 5-Dashboard Comparativo
+// 6-footer
+
+// Además los componentes 1, 2 y 4 van a ser dinámicos, es decir van a cambiar según la versión seleccionada mientras que los demás van a ser estáticos
+
+
+
+// ------------------ PÁGINAS DE CADA VERSIóN----------------------------
+// nav con boton ingresar o update(este hace sroll al formulario)
+// Hero modificado con boton de volver a home principal e ir al formulario (hacer scroll al formulario)
+// Descripción de herramientas y arquitectura
+// formulario
+// footer
+
+
+// -------------------PÁGINA PROTEGIDA --------------------------------
+// luego de logearse ingresa a página protegida 
+// -- nav cambia boton a logout
+// -- Header: "Bienvenido, [Usuario]".
+// -- indica versión a la que ingresó
+// -- muestra los datos del usuario 
+// -- Acciones rápidas: Botones para "Editar perfil" o "Ver historial
+
+
+// -------------------CONTEXT --------------------------------
+// AuthContext
+// VersionApiContext
+
+
+// -------------------APIS--------------------------------
+//     | Versión | Nombre              | Características Clave                          | Tecnologías                     |
+//     |---------|---------------------|------------------------------------------------|---------------------------------|
+//     | [v1](/v1-monolithic-core) | Monolithic Core     | Single-file CRUD                               | Node.js, Express, MySQL           |
+//     | [v2](/v2-modular-nexus)   | Modular Nexus       | MVC, Middlewares                               | Bcrypt, Passport, Validator       |
+//     | [v3](/v3-service-core)    | ServiceCore         | Servicios con Clases                           | JWT, Nodemailer                   |
+//     | [v4](/v4-securedoc)       | SecureDoc           | Logger, Swagger, Testing                       | Winston, Jest, Swagger UI, Mongo  |
+//     | [v5](/v5-solidcore)       | SolidCore           | SOLID, Repository Pattern                      | Inversify, DI                     |
+//     | [v6](/v6-typecraft)       | TypeCraft           | TypeScript, Decorators                         | TypeORM, TSConfig                 |
