@@ -9,7 +9,7 @@ const getVersionKeyFromPath = (pathname) => {
   return pathParts[0] || null;
 };
 
-export const VersionProvider = ({ children }) => {
+export const VersionApiProvider = ({ children }) => {
   const [currentVersionApi, setCurrentVersionApi] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
@@ -43,7 +43,13 @@ export const VersionProvider = ({ children }) => {
   // Método dinámico para llamadas API
   const callApi = async (
     endpointKey,
-    { body = {}, method = "POST", headers = {}, params = {} } = {}
+    {
+      body = {},
+      method = "POST",
+      headers = {},
+      params = {},
+      credentials = "omit",
+    } = {}
   ) => {
     if (!currentVersionApi) throw new Error("No API version selected");
 
@@ -67,6 +73,7 @@ export const VersionProvider = ({ children }) => {
         ...headers,
       },
       body: method !== "GET" ? JSON.stringify(body) : undefined,
+      credentials,
     });
 
     if (!response.ok) {
@@ -87,18 +94,18 @@ export const VersionProvider = ({ children }) => {
 };
 
 // Uso de callApi
-// // Ejemplo 1: Llamada simple
-// await callApi('login', {
-//   body: { username: 'ana', password: '123' }
-// });
+// Ejemplo 1: Llamada simple
+await callApi("login", {
+  body: { username: "ana", password: "123" },
+});
 
-// // Ejemplo 2: Llamada con todos los parámetros
-// await callApi('updateUser', {
-//   body: { name: 'Ana García' },
-//   method: 'PUT',
-//   headers: { 'Authorization': 'token123' },
-//   params: { userId: 123 }
-// });
+// Ejemplo 2: Llamada con todos los parámetros
+await callApi("updateUser", {
+  body: { name: "Ana García" },
+  method: "PUT",
+  headers: { Authorization: "token123" },
+  params: { userId: 123 },
+});
 
-// // Ejemplo 3: Llamada sin segundo parámetro
-// await callApi('getUsers'); // ← Usa todos los valores por defecto
+// Ejemplo 3: Llamada sin segundo parámetro
+await callApi("getUsers"); // ← Usa todos los valores por defecto
