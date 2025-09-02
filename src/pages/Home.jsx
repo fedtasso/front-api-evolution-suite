@@ -1,3 +1,46 @@
+// ------Estructura de carpetas-------
+// src/
+// ├── assets/               # Imágenes, estilos globales, etc.
+// ├── components/           # Componentes reutilizables
+// │   ├── common/           # Componentes compartidos (botones, cards, etc.)
+// │   ├── layout/           # Componentes de layout (header, footer, etc.)
+// │   ├── Nav/
+// │   │   └── Nav.jsx       # Navbar dinámico
+// │   ├── Hero/
+// │   │   └── Hero.jsx      # Hero dinámico
+// │   ├── ApiVersions/
+// │   │   └── ApiVersionSection.jsx  # Sección de cada versión de API
+// │   ├── HowItWorks/
+// │   │   └── HowItWorks.jsx # Sección "Cómo Funciona"
+// │   └── ComparisonDashboard/
+// │       └── ComparisonDashboard.jsx # Dashboard comparativo
+// ├── contexts/
+// │   ├── AuthContext.js    # Contexto de autenticación
+// │   └── VersionApiContext.js # Contexto para la API seleccionada
+// ├── pages/
+// │   ├── Home/             # Página de inicio
+// │   │   └── Home.jsx
+// │   ├── ApiVersion/       # Páginas de cada versión de API
+// │   │   ├── v1/
+// │   │   │   └── V1Page.jsx
+// │   │   ├── v2/
+// │   │   │   └── V2Page.jsx
+// │   │   └── ...           # Resto de versiones
+// │   ├── Protected/        # Página protegida después de login
+// │   │   └── ProtectedPage.jsx
+// │   └── NotFound.jsx      # Página 404
+// ├── services/             # Lógica para llamadas a APIs
+// │   ├── api/
+// │   │   ├── v1/
+// │   │   │   └── v1Service.js
+// │   │   ├── v2/
+// │   │   │   └── v2Service.js
+// │   │   └── ...
+// │   └── authService.js    # Servicio de autenticación
+// ├── utils/                # Utilidades
+// ├── App.js                # Rutas principales
+// └── main.js               # Punto de entrada
+
 // ----------------HOME---------------
 // Nav:
 // -- (izquierda) logo

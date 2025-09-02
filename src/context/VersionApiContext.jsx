@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { API_CONFIG } from "../config/apiConfig";
 
@@ -13,7 +13,7 @@ export const VersionApiProvider = ({ children }) => {
   const [currentVersionApi, setCurrentVersionApi] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
-  const params = useParams();
+  // const params = useParams(); // TO DO para que sirve en este contexto? no lo uso
   const [error, setError] = useState(null);
 
   // cargar version desde el path
@@ -23,19 +23,26 @@ export const VersionApiProvider = ({ children }) => {
   useEffect(() => {
     const loadApiConfig = async () => {
       setIsLoading(true);
+      setError(null);
       try {
         const versionConfig = API_CONFIG[versionKey];
+
+        if (!versionConfig) {
+          throw new Error(`Versión de API no encontrada: ${versionKey}`);
+        }
         setCurrentVersionApi(versionConfig || null);
-        setError(null);
-      } catch (err) {
-        setError(
-          `Error cargando la API ${versionConfig.title}: ${err.message}`
-        );
+      } catch (error) {
+        setError({
+          message: `Error cargando configuración de API`,
+          details: error.message,
+          versionKey: versionKey,
+        });
         setCurrentVersionApi(null);
       } finally {
         setIsLoading(false);
       }
     };
+
     if (versionKey) loadApiConfig();
     else setCurrentVersionApi(null);
   }, [versionKey]);
@@ -55,6 +62,9 @@ export const VersionApiProvider = ({ children }) => {
 
     const endpoint = currentVersionApi.endpoints[endpointKey];
 
+    if (!endpoint) {
+      throw new Error(`Endpoint no encontrado: ${endpointKey}`);
+    }
     let url = `${currentVersionApi.baseUrl}${endpoint.path}`;
 
     // Reemplazar parámetros dinámicos en la URL
@@ -86,26 +96,32 @@ export const VersionApiProvider = ({ children }) => {
 
   return (
     <VersionApiContext.Provider
-      value={{ versionApi, setVersionApi, isLoading, callApi }}
+      value={{
+        currentVersionApi,
+        setCurrentVersionApi,
+        error,
+        isLoading,
+        callApi,
+      }}
     >
       {children}
     </VersionApiContext.Provider>
   );
 };
 
-// Uso de callApi
-// Ejemplo 1: Llamada simple
-await callApi("login", {
-  body: { username: "ana", password: "123" },
-});
+// // Uso de callApi
+// // Ejemplo 1: Llamada simple
+// await callApi("login", {
+//   body: { username: "ana", password: "123" },
+// });
 
-// Ejemplo 2: Llamada con todos los parámetros
-await callApi("updateUser", {
-  body: { name: "Ana García" },
-  method: "PUT",
-  headers: { Authorization: "token123" },
-  params: { userId: 123 },
-});
+// // Ejemplo 2: Llamada con todos los parámetros
+// await callApi("updateUser", {
+//   body: { name: "Ana García" },
+//   method: "PUT",
+//   headers: { Authorization: "token123" },
+//   params: { userId: 123 },
+// });
 
-// Ejemplo 3: Llamada sin segundo parámetro
-await callApi("getUsers"); // ← Usa todos los valores por defecto
+// // Ejemplo 3: Llamada sin segundo parámetro
+// await callApi("getUsers"); // ← Usa todos los valores por defecto

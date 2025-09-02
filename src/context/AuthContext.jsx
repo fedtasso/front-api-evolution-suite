@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [autorized, setAutorized] = useState(false);
+  const [authorized, setAuthorized] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { callApi } = useContext(VersionApiContext);
@@ -23,6 +23,7 @@ export const AuthProvider = ({ children }) => {
 
       setUser(data.user);
       setIsAdmin(data.role === "admin");
+      setAuthorized(true)
       return { success: true, message: 'Sesión iniciada exitosamente' };
 
     } catch (error) {
@@ -47,6 +48,7 @@ export const AuthProvider = ({ children }) => {
 
       setUser(null);
       setIsAdmin(false);
+      setAuthorized(false)
       return { success: true, message: 'Sesión cerrada exitosamente' }
     } catch (error) {
       console.error(error.message);
@@ -98,6 +100,7 @@ export const AuthProvider = ({ children }) => {
 
       setUser(data.user);
       setIsAdmin(data.role === "admin");
+      setAuthorized(true)
       return { success: true, message: 'Usuario actualizado exitosamente' };
 
     } catch (error) {
@@ -116,7 +119,7 @@ export const AuthProvider = ({ children }) => {
   // ----------------------GET USER BY EMAIL-------------------------//
 
   return (
-    <AuthContext.Provider value={{ user, isAdmin, isLoading, login, logout, register }}>
+    <AuthContext.Provider value={{ user, isAdmin, isLoading, authorized, login, logout, register, updateUser }}>
       {children}
     </AuthContext.Provider>
   );
