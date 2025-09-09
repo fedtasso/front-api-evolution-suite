@@ -11,22 +11,26 @@ const getVersionKeyFromPath = (pathname) => {
 
 export const VersionApiProvider = ({ children }) => {
   const [currentVersionApi, setCurrentVersionApi] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
-  // const params = useParams(); // TO DO para que sirve en este contexto? no lo uso
   const [error, setError] = useState(null);
 
+  
   // cargar version desde el path
   const versionKey = getVersionKeyFromPath(location.pathname);
 
+  
   // Cargar configuración de la API seleccionada
   useEffect(() => {
     const loadApiConfig = async () => {
       setIsLoading(true);
       setError(null);
+      console.log("adentro")
+      console.log("version key", versionKey)
+      
       try {
         const versionConfig = API_CONFIG[versionKey];
-
+        
         if (!versionConfig) {
           throw new Error(`Versión de API no encontrada: ${versionKey}`);
         }
@@ -42,11 +46,12 @@ export const VersionApiProvider = ({ children }) => {
         setIsLoading(false);
       }
     };
-
+    
     if (versionKey) loadApiConfig();
     else setCurrentVersionApi(null);
   }, [versionKey]);
-
+  console.log("version api",currentVersionApi)  
+  
   // Método dinámico para llamadas API
   const callApi = async (
     endpointKey,

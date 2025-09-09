@@ -1,0 +1,38 @@
+:root {
+  /* Colores base */
+  --color-primary: var(--bs-blue);
+  --color-secondary: var(--bs-gray);
+  --color-success: var(--bs-green);
+  --color-danger: var(--bs-red);
+  --color-warning: var(--bs-yellow);
+  --color-info: var(--bs-cyan);
+  --color-light: #f8f9fa;
+  --color-dark: #212529;
+
+  /* COLORES DE VERSIONES API */
+  --color-v1: #667eea;           /* Monolithic Core */
+  --color-v2: #f093fb;           /* Modular Nexus */
+  --color-v3: #4facfe;           /* ServiceCore */
+  --color-v4: #43e97b;           /* SecureDoc */
+  --color-v5: #fa709a;           /* SolidCore */
+  --color-v6: #a8edea;           /* TypeCraft */
+  
+  /* TIPOGRAFÍA */
+  --title-hero: sans-serif;
+  --title-primary: sans-serif;
+  --text-primary: sans-serif;
+  --font-family-sans: sans-serif;
+  --font-family-mono: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  
+  --color-primaryy: #0d6efd;
+  --color-secondary: #6c757d;
+  --color-dark: #000000;
+  --color-light: #f8f9fa;
+  
+  /* Colores para hero */
+  --bg-hero-primary: rgba(2, 5, 161, 0.91);
+
+  /* Text */
+  --title-text: c;
+
+}

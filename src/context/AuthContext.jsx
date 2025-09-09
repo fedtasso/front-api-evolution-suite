@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { VersionApiContext } from "./VersionApiContext";
+import { useVersionApi } from "../hooks/useVersionApi";
 
 export const AuthContext = createContext();
 
@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [authorized, setAuthorized] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const { callApi } = useContext(VersionApiContext);
+  const { callApi } = useVersionApi();
 
   // ----------------------LOGIN-------------------------//
   const login = async (formData) => {

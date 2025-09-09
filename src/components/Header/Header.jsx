@@ -1,7 +1,7 @@
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/images/logo.png";
 
 function Header() {
   const { user, authorized, isLoading, logout } = useAuth();
@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <Navbar expand="lg" className="bg-light" fixed="top">
-      <Container fluid>
+      <Container fluid className="p-0">
         <Navbar.Brand as={Link} to="/">
           <img
             src={logo}

@@ -1,3 +1,5 @@
+import logo from "../assets/images/logo.png";
+
 const endpoints = {
   login: { path: "/auth/login", method: "POST" },
   logout: { path: "/auth/logout", method: "POST" },
@@ -9,11 +11,19 @@ const endpoints = {
 };
 
 export const API_CONFIG = {
+  home: {
+    id: "home",
+    title: "Home",
+    hexagonImage: logo
+  },
   v1: {
     id: "v1",
     title: "Monolithic Core",
     baseUrl: "URL a v1",
     endpoints,
+    description: "descripción monolitica",
+    hexagonTitle: "Monolithic Core",
+    hexagonIcon: "bi-cpu-fill"
   },
   v2: {
     id: "v2",
