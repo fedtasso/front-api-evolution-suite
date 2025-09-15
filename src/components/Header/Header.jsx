@@ -2,6 +2,9 @@ import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import logo from "../../assets/images/logo.png";
+import "./Header.css";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+
 
 function Header() {
   const { user, authorized, isLoading, logout } = useAuth();
@@ -9,7 +12,7 @@ function Header() {
   if (isLoading) return <div></div>;
 
   return (
-    <Navbar expand="lg" className="bg-light" fixed="top">
+    <Navbar expand="lg"  fixed="top" className="text-color-header">
       <Container fluid className="p-0">
         <Navbar.Brand as={Link} to="/">
           <img
@@ -17,12 +20,15 @@ function Header() {
             alt="Logo"
             width="auto"
             height="40"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top mx-2 p-1 bg-logo rounded-1"
           />
         </Navbar.Brand>
 
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="flex-column flex-lg-row align-items-end align-items-lg-center justify-content-center">
+             <div className="me-3">
+              <ThemeToggle />
+            </div>
             {authorized ? (
               <>
                 {/* <Nav className="d-flex align-items-end">
@@ -42,10 +48,10 @@ function Header() {
                   </p>
                 </div>
                 <NavDropdown
-                  title={<i className="bi bi-person-circle fs-3 m-1 "></i>}
+                  title={<i className="bi bi-person-circle fs-3 m-1 text-color-header"></i>}
                   id="user-dropdown"
                   align="end"
-                  className="text-end mx-3"
+                  className="text-end mx-3 "
                 >
                   <NavDropdown.Item></NavDropdown.Item>
                   <NavDropdown.Item as={Link} to="/profile">
@@ -66,7 +72,8 @@ function Header() {
                   <Button
                     as={Link}
                     to="/login"
-                    variant="dark"
+                    variant="dark" // TO DO color de texto y fondo
+                    
                     className="d-flex  justify-content-center"
                   >
                     <i className="bi bi-box-arrow-in-right me-2"></i>
@@ -77,7 +84,7 @@ function Header() {
                   <Button
                     as={Link}
                     to="/register"
-                    variant="dark"
+                    variant="dark" // TO DO color de texto y fondo
                     className="d-flex justify-content-center"
                   >
                     <i className="bi bi-person-plus me-2"></i>

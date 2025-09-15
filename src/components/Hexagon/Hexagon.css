@@ -1,0 +1,49 @@
+/* ----------------------Hexagon ------------------------ */
+.hexagon {
+  width: 200px;
+  height: 200px;
+  background-color: var(--custom-color-light);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0 0 0 4px #000000;
+  position: relative;
+}
+
+.v1-bg { background: var(--color-v1); }
+.v2-bg { background: var(--color-v2);}
+.v3-bg { background: var(--color-v3);}
+.v4-bg { background: var(--color-v4);}
+.v5-bg { background: var(--color-v5);}
+.v6-bg { background: var(--color-v6);}
+
+.hexagon-text {
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+
+.hexagon-image{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.hexagon-exterior-line{
+  z-index: 0;
+  object-fit: "cover";
+  top:  -5%;
+  right: 55%;  
+  width: 120%; 
+  height: 110%; 
+}
+
+.hexagon-exterior-line-2{
+  z-index: 0;
+  object-fit: "cover";
+  top:  -5%;
+  left: 55%;  
+  width: 120%; 
+  height: 110%;
+  transform: scaleX(-1)
+}

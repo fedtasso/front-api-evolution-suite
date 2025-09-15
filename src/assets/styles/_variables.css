@@ -1,38 +1,47 @@
 :root {
-  /* Colores base */
-  --color-primary: var(--bs-blue);
-  --color-secondary: var(--bs-gray);
-  --color-success: var(--bs-green);
-  --color-danger: var(--bs-red);
-  --color-warning: var(--bs-yellow);
-  --color-info: var(--bs-cyan);
-  --color-light: #f8f9fa;
-  --color-dark: #212529;
-
-  /* COLORES DE VERSIONES API */
-  --color-v1: #667eea;           /* Monolithic Core */
-  --color-v2: #f093fb;           /* Modular Nexus */
-  --color-v3: #4facfe;           /* ServiceCore */
-  --color-v4: #43e97b;           /* SecureDoc */
-  --color-v5: #fa709a;           /* SolidCore */
-  --color-v6: #a8edea;           /* TypeCraft */
+  /* ===== COLORES BASE ESENCIALES ===== */
+  --custom-color-primary: #2250b5;        /* principal */
+  --custom-color-secondary: #64748b;      /* --------- Gris secundario */
+  --custom-color-success: #16a34a;        /* --------- Verde - Más vibrante */
+  --custom-color-danger: #dc2626;         /* --------- Rojo - Más intenso */
+  --custom-color-warning: #d97706;        /* --------- Amarillo - Terroso/más elegante */
+  --custom-color-info: #0891b2;           /* --------- Cyan - Más profundo */
   
-  /* TIPOGRAFÍA */
-  --title-hero: sans-serif;
-  --title-primary: sans-serif;
-  --text-primary: sans-serif;
-  --font-family-sans: sans-serif;
-  --font-family-mono: 'Fira Code', 'Monaco', 'Consolas', monospace;
-  
-  --color-primaryy: #0d6efd;
-  --color-secondary: #6c757d;
-  --color-dark: #000000;
-  --color-light: #f8f9fa;
-  
-  /* Colores para hero */
-  --bg-hero-primary: rgba(2, 5, 161, 0.91);
+  /* ===== COLORES PARA VERSIONES API ===== */
+  --color-v1: #6366f1;             /* Monolithic Core - Índigo */
+  --color-v2: #ec4899;             /* Modular Nexus - Rosa */
+  --color-v3: #0ea5e9;             /* ServiceCore - Azul cielo */
+  --color-v4: #10b981;             /* SecureDoc - Esmeralda */
+  --color-v5: #f97316;             /* SolidCore - Naranja */
+  --color-v6: #8b5cf6;             /* TypeCraft - Púrpura */
 
-  /* Text */
-  --title-text: c;
 
+  /* ------ COLORES NEUTROS ------ */
+  --custom-color-light:#f1f5f9  ;          /* Fondo claro muy suave */
+  --custom-color-dark: #1e293b;           /* --------- Texto oscuro más suave */
+  --custom-color-white: #ffffff;          /* --------- Blanco puro */
+  --custom-color-black: #000000;          /* --------- Negro puro */
+  
+  /* ===== COLORES FUNCIONALES ===== */
+  --custom-color-link: #818cf8;           /* --------- Links - Índigo moderno */
+  --custom-color-link-hover: #6366f1;     /* --------- Links hover más oscuro */
+  --custom-color-border: #e2e8f0;         /* --------- Bordes muy sutiles */
+  --custom-color-background: #ffffff;     /* --------- Fondo principal */
+
+  /* ------ Tema ligth por defecto ------ */
+  --custom-bg: #f1f5f9;
+  --custom-text: #000000;
+  --custom-text-hero: #f1f5f9;
+}
+
+[data-theme="dark"] {
+  --custom-bg: #020204;
+  --custom-text: #f1f5f9;
+  --custom-text-hero: #000000;
+}
+
+body {
+  background: var(--custom-bg);
+  color: var(--custom-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

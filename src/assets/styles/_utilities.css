@@ -1,0 +1,27 @@
+.hero-title{
+  font-family: sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.section-title {
+ font-family: sans-serif;
+ font-size: 3rem;
+ font-weight: 300;
+}
+
+.subtitle {
+ font-family: sans-serif;
+ font-size: 1.75rem;
+}
+.body-text {
+ font-family: sans-serif;
+ font-size: 1.25rem;
+}
+
+.small-text {
+ font-family: sans-serif;
+ font-size: 1rem;
+}
+
+

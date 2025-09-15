@@ -21,7 +21,7 @@ export const API_CONFIG = {
     title: "Monolithic Core",
     baseUrl: "URL a v1",
     endpoints,
-    description: "descripción monolitica",
+    description: "Descripción Monolitica Descripción Monolitica Descripción Monolitica Descripción Monolitica Descripción Monolitica ",
     hexagonTitle: "Monolithic Core",
     hexagonIcon: "bi-cpu-fill"
   },

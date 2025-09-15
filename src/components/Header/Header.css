@@ -1,0 +1,8 @@
+.text-color-header{
+    background-color: var(--custom-bg);
+    color: var(--custom-text);
+}
+
+.bg-logo{
+    background-color: var(--custom-color-light);
+}
