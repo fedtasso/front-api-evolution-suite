@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { useVersionApi } from "../../hooks/useVersionApi";
 import { Button, Col, Container, Nav, Row } from "react-bootstrap";
-
 import "./hero.css";
 import Hexagon from "../Hexagon/Hexagon";
 

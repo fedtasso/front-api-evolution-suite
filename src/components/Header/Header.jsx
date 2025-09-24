@@ -12,7 +12,7 @@ function Header() {
   if (isLoading) return <div></div>;
 
   return (
-    <Navbar expand="lg"  fixed="top" className="text-color-header">
+    <Navbar expand="lg"  fixed="top" className="text-color-header custom-navbar-border">
       <Container fluid className="p-0">
         <Navbar.Brand as={Link} to="/">
           <img

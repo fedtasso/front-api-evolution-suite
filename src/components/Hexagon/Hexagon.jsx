@@ -28,6 +28,7 @@ function Hexagon() {
             />
           </>
         )}
+        <div className="hexagon2 position-absolute"></div>
         <div
           className={`hexagon d-flex flex-column justify-content-center align-items-center ${currentVersionApi?.id}-bg`}
         >

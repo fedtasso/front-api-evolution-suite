@@ -1,5 +1,5 @@
 .hero {
   background: var(--custom-color-primary);
   padding-top: 58px; 
-  color: var(--custom-text-hero)
+  color: var(--custom-color-text-hero) 
 }

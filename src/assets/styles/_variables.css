@@ -1,7 +1,7 @@
 :root {
   /* ===== COLORES BASE ESENCIALES ===== */
   --custom-color-primary: #2250b5;        /* principal */
-  --custom-color-secondary: #64748b;      /* --------- Gris secundario */
+  --custom-primary-color-transparent:rgba(34, 80, 181, 0.4); 
   --custom-color-success: #16a34a;        /* --------- Verde - Más vibrante */
   --custom-color-danger: #dc2626;         /* --------- Rojo - Más intenso */
   --custom-color-warning: #d97706;        /* --------- Amarillo - Terroso/más elegante */
@@ -30,18 +30,25 @@
 
   /* ------ Tema ligth por defecto ------ */
   --custom-bg: #f1f5f9;
-  --custom-text: #000000;
-  --custom-text-hero: #f1f5f9;
+  --custom-color-text-hero: #f1f5f9;
+  --custom-color-section-title:#314f6c;
+  --custom-color-tech-pill-bg: #b4caf8;
+  --custom-color-tech-pill-text-hover: #f1f5f9;
+  --custom-color-secondary: #c3d6f1da;
 }
 
 [data-theme="dark"] {
-  --custom-bg: #020204;
-  --custom-text: #f1f5f9;
-  --custom-text-hero: #000000;
+  --custom-bg: #252529;
+  --custom-color-text: #f1f5f9;
+  --custom-color-text-hero: #000000;
+  --custom-color-section-title:#b7babc;
+  --custom-color-tech-pill-bg: #758bbb;
+  --custom-color-tech-pill-text-hover: #000000;
+  --custom-color-secondary: #465160;
 }
 
 body {
   background: var(--custom-bg);
-  color: var(--custom-text);
+  color: var(--custom-color-text);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
