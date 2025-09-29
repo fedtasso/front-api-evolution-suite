@@ -1,5 +1,16 @@
 .hero {
   background: var(--custom-color-primary);
   padding-top: 58px; 
-  color: var(--custom-color-text-hero) 
+  color: var(--custom-color-text-hero);
+  height: auto;
+}
+
+.max-width {
+  max-width: 1454px;
+}
+
+@media (min-width: 400px) {
+  .hero {
+    height: 100vh;
+  }
 }

@@ -1,13 +1,13 @@
 import ProjectDescription from "../components/ProjectDescription/ProjectDescription";
 import Hero from "../components/Hero/Hero";
-import VersionApiHome from "../components/VersionApiHome/VersionApiHome";
+import VersionApiCard from "../components/VersionApiCard/VersionApiCard";
 
 function Home() {
   return (
     <div>
       <Hero/>
       <ProjectDescription></ProjectDescription>
-      <VersionApiHome></VersionApiHome>
+      <VersionApiCard></VersionApiCard>
     </div>
   );
 }

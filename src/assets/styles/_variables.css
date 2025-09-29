@@ -35,6 +35,7 @@
   --custom-color-tech-pill-bg: #b4caf8;
   --custom-color-tech-pill-text-hover: #f1f5f9;
   --custom-color-secondary: #c3d6f1da;
+  --font-weight-sutitle: 500;
 }
 
 [data-theme="dark"] {
@@ -45,6 +46,7 @@
   --custom-color-tech-pill-bg: #758bbb;
   --custom-color-tech-pill-text-hover: #000000;
   --custom-color-secondary: #465160;
+  --font-weight-sutitle: 600;
 }
 
 body {

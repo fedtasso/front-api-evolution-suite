@@ -2,7 +2,7 @@ import { useVersionApi } from "../../hooks/useVersionApi";
 import lineImage from "../../assets/images/lineas-hero.png";
 import "./Hexagon.css"
 
-function Hexagon() {
+function HexagonUrl() {
   const { currentVersionApi, isLoading } = useVersionApi();
 
   if (isLoading) {
@@ -57,4 +57,4 @@ function Hexagon() {
 }
 
 
-export default Hexagon;
+export default HexagonUrl;

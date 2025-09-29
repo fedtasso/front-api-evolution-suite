@@ -1,11 +1,11 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useVersionApi } from "../../hooks/useVersionApi";
-import "./VersionApiHome.css";
+import "./VersionApiCard.css";
 import { API_CONFIG } from "../../config/apiConfig";
 import "../Hexagon/Hexagon.css";
-import HexagonVersion from "../Hexagon/HexagonVersion";
+import HexagonIterator from "../Hexagon/HexagonIterator";
 
-function VersionApiHome() {
+function VersionApiCard() {
   const { isLoading } = useVersionApi();
 
   if (isLoading) {
@@ -16,7 +16,7 @@ function VersionApiHome() {
     );
   } else {
     return (
-      <Container className="">
+      <Container>
         {Object.entries(API_CONFIG).map(([key, config], index) => {
           // Saltar la clave 'home'
           if (key === "home") return null;
@@ -25,20 +25,29 @@ function VersionApiHome() {
           const isEven = index % 2 === 0;
 
           return (
-            <div key={key} className="pb-4 mx-5">
+            <div key={key} className="pb-4 mx-md-5">
               <Row className="my-3 mx-2 p-5 version-api">
-                
-                {isEven ? (
-                  <HexagonVersion config={config}></HexagonVersion>
-                ) : null}
+                <Col
+                  lg={{ span: 4, order: isEven ? 1 : 2 }}
+                  xs={{ span: 12, order: 1 }}
+                  className="d-flex justify-content-center mb-4 mb-lg-0"
+                >
+                  <HexagonIterator config={config} />
+                </Col>
 
                 {/* Columna del contenido */}
-                <Col lg={8} className="d-flex justify-content-center">
+                <Col
+                  lg={{ span: 8, order: isEven ? 2 : 1 }}
+                  xs={{ span: 12, order: 2 }}
+                  className="d-flex justify-content-center"
+                >
                   <div className="container mt-4 d-flex flex-column justify-content-center">
                     <h2 className="section-title text-center mb-5">
                       {config.title}
                     </h2>
-                    <p className="text-center mb-4">{config.description}</p>
+                    <p className="text-center body-text mb-4">
+                      {config.descriptionCard}
+                    </p>
                     {/* Lista de tecnologías
                     {config.technologies && config.technologies.length > 0 && (
                       <div className="">
@@ -66,11 +75,6 @@ function VersionApiHome() {
                     </div>
                   </div>
                 </Col>
-
-                {/* Columna del hexágono - Derecha para índices impares */}
-                {!isEven ? (
-                  <HexagonVersion config={config}></HexagonVersion>
-                ) : null}
               </Row>
             </div>
           );
@@ -80,4 +84,4 @@ function VersionApiHome() {
   }
 }
 
-export default VersionApiHome;
+export default VersionApiCard;

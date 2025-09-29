@@ -2,6 +2,7 @@
   font-family: sans-serif;
   font-size: 3rem;
   font-weight: 800;
+  padding-top: 3rem;
 }
 
 .section-title {
@@ -14,12 +15,14 @@
 
 .subtitle {
  font-family: sans-serif;
- font-size: 1.75rem;
+ font-size: 1.20rem;
+ font-weight: var(--font-weight-sutitle);
 }
 
 .body-text {
  font-family: sans-serif;
  font-size: 1.15rem;
+ font-weight: 200;
 }
 
 .small-text {
@@ -32,15 +35,30 @@
   font-weight: 600;
 }
 
-
-@media (min-width: 900px) {
+@media (min-width: 540px) {
   .hero-title {
-    font-size: 5rem;
+    font-size: 3.5rem;
+    padding-top: 0;
   }
 
   .body-text {
     font-family: sans-serif;
     font-size: 1.25rem;
-}
+  }
+
+  .subtitle {
+    font-size: 1.35rem;
+  }
 }
 
+@media (min-width: 710px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+}

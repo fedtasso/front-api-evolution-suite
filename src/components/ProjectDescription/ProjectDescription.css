@@ -1,6 +1,3 @@
-.project-description-section {
-  position: relative;
-}
 
 /* tech pill */
 
@@ -30,28 +27,6 @@
 }
 
 
-
-/* Divisor decorativo */
-.custom-shape-divider-top-1758044097 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1758044097 svg {
-    position: relative;
-    display: block;
-    width: calc(108% + 1.3px);
-    height: 49px;
-    transform: rotateY(180deg);
-}
-
-.custom-shape-divider-top-1758044097 .shape-fill {
-    fill: var(--custom-color-primary);
-}
    
 /* Responsive adjustments */
 @media (max-width: 768px) {

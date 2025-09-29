@@ -25,8 +25,6 @@ export const VersionApiProvider = ({ children }) => {
     const loadApiConfig = async () => {
       setIsLoading(true);
       setError(null);
-      console.log("adentro")
-      console.log("version key", versionKey)
       
       try {
         const versionConfig = API_CONFIG[versionKey];
@@ -50,7 +48,7 @@ export const VersionApiProvider = ({ children }) => {
     if (versionKey) loadApiConfig();
     else setCurrentVersionApi(null);
   }, [versionKey]);
-  console.log("version api",currentVersionApi)  
+  console.log(currentVersionApi)
   
   // Método dinámico para llamadas API
   const callApi = async (

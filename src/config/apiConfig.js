@@ -21,8 +21,12 @@ export const API_CONFIG = {
     title: "Monolithic Core",
     baseUrl: "URL a v1",
     endpoints,
-    description:
-      "Descripción Monolitica Descripción Monolitica Descripción Monolitica Descripción Monolitica Descripción Monolitica ",
+    descriptionHero:
+      "Descripción Monolitica Descripción Monolitica Descripción Monolitica Descripción Monolitica",
+    descriptionPage:
+      "Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica ",
+    descriptionCard:
+      "Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica ",
     technologies: ["Arquitectura monolítica", "Node.js", "Express", "MySQL"],
     hexagonTitle: "Monolithic Core",
     hexagonIcon: "bi-cpu-fill",
@@ -32,8 +36,13 @@ export const API_CONFIG = {
     title: "Modular Nexus",
     baseUrl: "URL a v1",
     endpoints,
-    description:
-      "Descripción Modular Descripción Monolitica Descripción Monolitica Descripción Monolitica Descripción Monolitica ",
+   descriptionHero:
+      "Descripción Monolitica Descripción Monolitica Descripción Monolitica Descripción Monolitica",
+    descriptionPage:
+      "Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica ",
+    descriptionCard:
+      "Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica ",
+
     technologies: ["Patrón MVC", "Node.js", "Express", "Bcrypt", "Passport"],
     hexagonTitle: "Modular Nexus",
     hexagonIcon: "bi-cpu-fill",
@@ -43,8 +52,13 @@ export const API_CONFIG = {
     title: "Sarasa Sasa",
     baseUrl: "URL a v1",
     endpoints,
-    description:
-      "Descripción Sarasa sasa Descripción Monolitica Descripción Monolitica Descripción Monolitica Descripción Monolitica ",
+   descriptionHero:
+      "Descripción Monolitica Descripción Monolitica Descripción Monolitica Descripción Monolitica",
+    descriptionPage:
+      "Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica ",
+    descriptionCard:
+      "Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica Descripción Version Monolitica ",
+
     hexagonTitle: "Sarasa Sasa",
     hexagonIcon: "bi-cpu-fill",
   },

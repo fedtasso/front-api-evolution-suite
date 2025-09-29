@@ -1,7 +1,7 @@
 import { Col } from "react-bootstrap";
 import "./Hexagon.css"
 
-function HexagonVersion ({config}) {
+function HexagonIterator ({config}) {
     return (
         <Col lg={4} className="d-flex justify-content-center align-items-center">
                     <div className="d-flex position-relative">
@@ -23,4 +23,4 @@ function HexagonVersion ({config}) {
     )
 }
 
-export default HexagonVersion;
+export default HexagonIterator;
