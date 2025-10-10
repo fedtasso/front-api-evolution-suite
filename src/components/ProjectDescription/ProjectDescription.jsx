@@ -14,7 +14,7 @@ const ProjectDescription = () => {
 
             {/* Texto descriptivo */}
             <p className="body-text">
-              <span className="text-highlight">API Evolution Suite</span>{" "}
+              <span className="highlight-text">API Evolution Suite</span>{" "}
               es un banco de pruebas interactivo donde implemento y comparo 6
               enfoques arquitectónicos distintos para resolver los mismos
               problemas de backend, desde un monolito simple hasta sistemas

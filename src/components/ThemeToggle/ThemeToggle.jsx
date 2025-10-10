@@ -8,7 +8,7 @@ function ThemeToggle() {
     <Button
       variant="outline-secondary"
       onClick={toggleTheme}
-      className="d-flex align-items-center"
+      className="d-flex align-items-center my-2 my-lg-0"
     >
       <i className={`bi ${isDark ? "bi-sun" : "bi-moon"} me-1`}></i>
     </Button>

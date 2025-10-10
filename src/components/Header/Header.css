@@ -1,12 +1,33 @@
 .text-color-header{
-    background-color: var(--custom-bg);
-    color: var(--custom-color-text);
+  background-color: var(--custom-bg);
+  color: var(--custom-color-text);
+}
+
+.header-text .dropdown-toggle {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--custom-color-text); 
+}
+
+.header-text .dropdown-toggle:hover,
+.header-text .dropdown-toggle:focus {
+  color:var(--custom-color-text) !important; 
+}
+
+.dropdown-menu .dropdown-item {
+  color: var(--custom-color-black)
 }
 
 .bg-logo{
-    background-color: var(--custom-color-light);
+  background-color: var(--custom-color-light);
 }
 
 .custom-navbar-border {
   border-bottom: 1px solid rgba(200, 200, 200, 0.3);
+}
+
+.nav-color-inverter .navbar-toggler-icon {
+  background-color: var(--custom-color-text);
+  mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }

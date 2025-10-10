@@ -1,0 +1,30 @@
+.register-card {
+  max-width: 700px;
+  margin: 0 auto;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.custom-bg{
+  background-color: var(--custom-color-secondary);
+}
+
+.success-icon {
+  font-size: 3rem;
+  color:var(--custom-color-success);
+  line-height: 1;
+}
+
+.form-control:focus {
+  border-color: var(--custom-primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+
+@media (max-width: 576px) {
+  .register-card {
+    margin: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

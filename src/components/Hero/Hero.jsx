@@ -26,11 +26,11 @@ function Hero() {
               lg={12}
               className="text-center d-flex flex-column justify-content-center"
             >
-              <h1 className="hero-title mb-0 ">API Evolution Suite</h1>
+              <h1 className="hero-title mb-0 ">{currentVersionApi?.title || "API Evolution Suite"}</h1>
               <div className="d-flex align-item-center justify-content-center ">
                 <HexagonUrl></HexagonUrl>
               </div>
-              <p className="subtitle px-lg-5 mx-lg-3">
+              <p className="highlight-text px-lg-5 mx-lg-3">
                 {currentVersionApi?.descriptionHero ??
                   "Un viaje interactivo por la evolución de las arquitecturas backend"}
               </p>
@@ -53,6 +53,7 @@ function Hero() {
                       rel="noopener noreferrer"
                       className="text-decoration-none"
                     >
+                      <i className="bi bi-github me-1"></i>
                       GitHub Back
                     </Button>
                     <Button
@@ -61,17 +62,11 @@ function Hero() {
                       href="https://github.com/fedtasso/front-api-evolution-suite"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ms-2 ms-md-4  text-decoration-none"
+                      className="ms-2 ms-md-4  text-decoration-none "
                     >
+                      <i className="bi bi-github me-1"></i>
                       GitHub Front
                     </Button>
-                  </div>
-                  <div>
-                    {currentVersionApi?.id !== "home" && (
-                      <Button variant="light" size="lg" className="ms-2">
-                        CRUD
-                      </Button>
-                    )}
                   </div>
                 </div>
               </div>

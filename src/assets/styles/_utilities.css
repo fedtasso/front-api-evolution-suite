@@ -15,24 +15,55 @@
 
 .subtitle {
  font-family: sans-serif;
+ font-size: 2rem;
+ font-weight: 700;
+ text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+ color: var(--custom-color-section-title);
+}
+
+.highlight-text {
+ font-family: sans-serif;
  font-size: 1.20rem;
- font-weight: var(--font-weight-sutitle);
+ font-weight: 600;
+ color: var(--custom-color-text)
 }
 
 .body-text {
  font-family: sans-serif;
  font-size: 1.15rem;
  font-weight: 200;
+ color: var(--custom-color-text)
 }
 
 .small-text {
  font-family: sans-serif;
  font-size: 1rem;
+ color: var(--custom-color-text)
 }
 
-.text-highlight {
-  color: var(--custom-color-section-title);
-  font-weight: 600;
+.link{
+  color: var(--custom-color-link) !important;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.botton-color {
+   background-color: var(--custom-bg-inverted);
+   color: var(--custom-color-text-inverted);
+   border: none;
+}
+
+.botton-color-form {
+   background-color: var(--custom-color-primary) ;
+   border: none;
+}
+
+.botton-color-form:hover {
+   background-color: var(--custom-primary-color-transparent);
+   color: var(--custom-color-text-inverted);
 }
 
 @media (min-width: 540px) {
@@ -46,7 +77,7 @@
     font-size: 1.25rem;
   }
 
-  .subtitle {
+  .highlight-text {
     font-size: 1.35rem;
   }
 }

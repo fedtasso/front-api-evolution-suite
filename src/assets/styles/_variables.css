@@ -20,33 +20,39 @@
   --custom-color-light:#f1f5f9  ;          /* Fondo claro muy suave */
   --custom-color-dark: #1e293b;           /* --------- Texto oscuro más suave */
   --custom-color-white: #ffffff;          /* --------- Blanco puro */
-  --custom-color-black: #000000;          /* --------- Negro puro */
+  --custom-color-black: #000000;         
   
   /* ===== COLORES FUNCIONALES ===== */
-  --custom-color-link: #818cf8;           /* --------- Links - Índigo moderno */
+            
   --custom-color-link-hover: #6366f1;     /* --------- Links hover más oscuro */
   --custom-color-border: #e2e8f0;         /* --------- Bordes muy sutiles */
   --custom-color-background: #ffffff;     /* --------- Fondo principal */
 
   /* ------ Tema ligth por defecto ------ */
   --custom-bg: #f1f5f9;
-  --custom-color-text-hero: #f1f5f9;
+  --custom-bg-inverted: #252529;
+  --custom-color-text: #000000;
+  --custom-color-text-inverted: #f1f5f9;
   --custom-color-section-title:#314f6c;
   --custom-color-tech-pill-bg: #b4caf8;
   --custom-color-tech-pill-text-hover: #f1f5f9;
   --custom-color-secondary: #c3d6f1da;
-  --font-weight-sutitle: 500;
+  --font-weight-highlight-text: 600;
+  --custom-color-link: #3649f6; 
+  
 }
 
 [data-theme="dark"] {
   --custom-bg: #252529;
+  --custom-bg-inverted: #f1f5f9;
   --custom-color-text: #f1f5f9;
-  --custom-color-text-hero: #000000;
+  --custom-color-text-inverted: #000000;
   --custom-color-section-title:#b7babc;
   --custom-color-tech-pill-bg: #758bbb;
   --custom-color-tech-pill-text-hover: #000000;
   --custom-color-secondary: #465160;
-  --font-weight-sutitle: 600;
+  --font-weight-highlight-text: 600;
+  --custom-color-link: #95a0ff;
 }
 
 body {

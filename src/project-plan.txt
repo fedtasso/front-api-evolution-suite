@@ -108,6 +108,7 @@ luego de logearse ingresa a página protegida
 -------------------CONTEXT --------------------------------
 AuthContext
 VersionApiContext
+ThemeContext
 
 -------------------APIS--------------------------------
     | Versión | Nombre              | Características Clave                          | Tecnologías                     |
@@ -118,3 +119,17 @@ VersionApiContext
     | [v4](/v4-securedoc)       | SecureDoc           | Logger, Swagger, Testing                       | Winston, Jest, Swagger UI, Mongo  |
     | [v5](/v5-solidcore)       | SolidCore           | SOLID, Repository Pattern                      | Inversify, DI                     |
     | [v6](/v6-typecraft)       | TypeCraft           | TypeScript, Decorators                         | TypeORM, TSConfig                 |
+
+
+---------------Formularios---------------------------
+src/components/Forms/
+├── auth/
+│   ├── LoginForm.jsx
+│   └── RegisterForm.jsx
+├── user/
+│   ├── UserCreateForm.jsx
+│   ├── UserUpdateForm.jsx
+│   └── UserProfileForm.jsx
+└── shared/
+    ├── FormInput.jsx
+    └── FormButton.jsx

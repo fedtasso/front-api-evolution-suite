@@ -1,7 +1,7 @@
 .hero {
   background: var(--custom-color-primary);
   padding-top: 58px; 
-  color: var(--custom-color-text-hero);
+  color: var(--custom-color-text-inverted);
   height: auto;
 }
 

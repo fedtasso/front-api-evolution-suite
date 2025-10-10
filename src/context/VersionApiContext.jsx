@@ -28,6 +28,7 @@ export const VersionApiProvider = ({ children }) => {
       
       try {
         const versionConfig = API_CONFIG[versionKey];
+        console.log("version", versionConfig)
         
         if (!versionConfig) {
           throw new Error(`Versión de API no encontrada: ${versionKey}`);
