@@ -1,4 +1,4 @@
-# 🚀 API Evolution Suite
+# API Evolution Suite
 
 <div align="center">
 
@@ -11,14 +11,14 @@
 
 </div>
 
-## 📖 Sobre el Proyecto
+## Sobre el Proyecto
 
 **API Evolution Suite** es una aplicación frontend educativa que permite comparar y experimentar diferentes arquitecturas backend, implementando el mismo conjunto de funcionalidades CRUD con enfoques progresivamente más sofisticados.
 
-### 🎯 Objetivo
+### Objetivo
 Demostrar cómo evoluciona el diseño, mantenibilidad y escalabilidad de una API al aplicar diferentes patrones arquitectónicos, desde un monolito simple hasta implementaciones complejas con TypeScript y principios SOLID.
 
-## 🏗️ Arquitecturas Implementadas
+## Arquitecturas Implementadas
 
 | Versión | Nombre | Arquitectura | Tecnologías Clave |
 |---------|--------|--------------|------------------|
@@ -29,19 +29,19 @@ Demostrar cómo evoluciona el diseño, mantenibilidad y escalabilidad de una API
 | **v5** | SolidCore | Principios SOLID | Inversify, DI, Repository Pattern |
 | **v6** | TypeCraft | TypeScript First | TypeORM, Decorators, PostgreSQL |
 
-## ✨ Características
+## Características
 
-### 🎨 Frontend
+### Frontend
 - **Framework**: React 18 + Vite
 - **UI**: React Bootstrap + CSS personalizado
 - **Estado**: Context API + Hooks personalizados
+- **Páginas dinámicas**: Sistema de templates con objetos de configuración
 - **Enrutamiento**: React Router DOM
 - **Temas**: Modo claro/oscuro dinámico
 
-### 🔧 Funcionalidades
+### Funcionalidades
 - ✅ Comparación visual de arquitecturas
 - ✅ Formularios CRUD para cada versión
 - ✅ Navegación contextual dinámica
 - ✅ Autenticación y autorización
 - ✅ Diseño 100% responsive
-- ✅ Dashboard comparativo
