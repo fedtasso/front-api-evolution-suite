@@ -9,13 +9,11 @@
 
 **Un laboratorio interactivo para explorar la evolución de arquitecturas backend**
 
-[Características](#-características) • [Arquitecturas](#-arquitecturas) • [Instalación](#-instalación) • [Uso](#-uso)
-
 </div>
 
 ## 📖 Sobre el Proyecto
 
-**API Evolution Suite** es una aplicación frontend educativa que permite comparar y experimentar con 6 diferentes arquitecturas backend, implementando el mismo conjunto de funcionalidades CRUD con enfoques progresivamente más sofisticados.
+**API Evolution Suite** es una aplicación frontend educativa que permite comparar y experimentar diferentes arquitecturas backend, implementando el mismo conjunto de funcionalidades CRUD con enfoques progresivamente más sofisticados.
 
 ### 🎯 Objetivo
 Demostrar cómo evoluciona el diseño, mantenibilidad y escalabilidad de una API al aplicar diferentes patrones arquitectónicos, desde un monolito simple hasta implementaciones complejas con TypeScript y principios SOLID.
@@ -47,16 +45,3 @@ Demostrar cómo evoluciona el diseño, mantenibilidad y escalabilidad de una API
 - ✅ Autenticación y autorización
 - ✅ Diseño 100% responsive
 - ✅ Dashboard comparativo
-
-## 🚀 Instalación
-
-### Prerrequisitos
-- Node.js 18 o superior
-- npm o yarn
-
-### Pasos de instalación
-
-1. **Clonar el repositorio**
-   ```bash
-   git clone https://github.com/fedtasso/front-api-evolution-suite.git
-   cd front-api-evolution-suite
