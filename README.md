@@ -25,7 +25,7 @@ Demostrar cómo evoluciona el diseño, mantenibilidad y escalabilidad de una API
 | **v1** | Monolithic Core | Monolito Simple | Node.js, Express, MySQL |
 | **v2** | Modular Nexus | MVC + Middlewares | Bcrypt, Passport, Validator |
 | **v3** | ServiceCore | Capa de Servicios | JWT, Nodemailer, Clases |
-| **v4** | SecureDoc | Documentada & Testeada | Winston, Jest, Swagger, MongoDB |
+| **v4** | SecureDoc | Documentada & Testeada | Winston, Jest, Swagger |
 | **v5** | SolidCore | Principios SOLID | Inversify, DI, Repository Pattern |
 | **v6** | TypeCraft | TypeScript First | TypeORM, Decorators, PostgreSQL |
 
